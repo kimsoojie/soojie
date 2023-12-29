@@ -9,8 +9,8 @@ defaults:
 paginate: 10
 paginate_path: "/blog/page:num/"
 
-title: Christian Ezeani
-subtitle: Full-Stack Developer
+title: Soojie Kim
+subtitle: 
 
 # left_side:
 #   background_image: "./assets/images/left-background.jpg"
@@ -19,7 +19,7 @@ subtitle: Full-Stack Developer
 #   text_color: "#F00"
 
 footer:
-  copyright_text: "&copy; Christian Ezeani"
+  copyright_text: "&copy; Soojie Kim"
 
 # Side Menu Links
 menu:
@@ -27,39 +27,39 @@ menu:
     link: /
     icon: ""
 
-  - text: Skills & Offers
-    link: /skills-and-offers
-    icon: ""
+  #- text: Skills & Offers
+  #  link: /skills-and-offers
+  #  icon: ""
 
-  - text: Contact Me
-    link: /contact
-    icon: ""
+  #- text: Contact Me
+  #  link: /contact
+  #  icon: ""
 
-  - text: My Resume
-    link: /resume
-    icon: ""
+  #- text: My Resume
+  #  link: /resume
+  #  icon: ""
 
-  - text: Blog Posts
-    link: /blog
-    icon: ""
+  #- text: Blog Posts
+  #  link: /blog
+  #  icon: ""
 
 # Socialmedia Icons
 social_icons:
-  - name: linkedin
-    link: https://www.linkedin.com/christianezeani
-    icon: fab fa-linkedin
+  #- name: linkedin
+  #  link: https://www.linkedin.com/christianezeani
+  #  icon: fab fa-linkedin
 
   - name: github
-    link: https://github.com/christianezeani
+    link: https://github.com/kimsoojie
     icon: fab fa-github-square
 
-  - name: facebook
-    link: https://www.facebook.com/christian.ezeani.cyb
-    icon: fab fa-facebook-square
+  #- name: facebook
+  #  link: https://www.facebook.com/christian.ezeani.cyb
+  #  icon: fab fa-facebook-square
 
-  - name: twitter
-    link: https://www.twitter.com/christianezeani
-    icon: fab fa-twitter
+  #- name: twitter
+  #  link: https://www.twitter.com/christianezeani
+  #  icon: fab fa-twitter
 
 
     
