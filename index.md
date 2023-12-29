@@ -16,9 +16,9 @@ PhD Student
 [Ulsan National Institute of Science and Technology (UNIST)](https://www.unist.ac.kr)
 
 
-**Email:** sujikim.821@gmail.com
+**Email:** [sujikim.821@gmail.com](sujikim.821@gmail.com)
 
-**Github:** https://github.com/kimsoojie
+**Github:** [https://github.com/kimsoojie](https://github.com/kimsoojie)
 
 50 UNIST-gil, Ulju, Ulsan, South Korea, 44919
 
