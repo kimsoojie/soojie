@@ -30,16 +30,16 @@ PhD Student
 * Action Recognition
 
 ## Education
-* **PhD.** at [Artificial Intelligence Graduate School, Ulsan National Institute of Science and Technology (UNIST)](https://aigs.unist.ac.kr/web/index.php), Ulsan, South Korea.
+* **Ph.D.** at [Artificial Intelligence Graduate School, Ulsan National Institute of Science and Technology (UNIST)](https://aigs.unist.ac.kr/web/index.php), Ulsan, South Korea.
 
-    - Advisor: Seungryul Baek 
+    - Advisor: [Seungryul Baek](https://sites.google.com/site/bsrvision00/)
 
     - Mar. 2024 ~.
 
 
 * **M.S.** at [Electrical Computer Engineering (Artificial Intelligence), Inha University](https://inhaece.co.kr), Incheon, South Korea.
 
-    - Advisor: Inkyu Park 
+    - Advisor: [Inkyu Park](https://sites.google.com/view/vcl-lab/)
 
     - Sep. 2020 ~ Feb. 2023.
 
