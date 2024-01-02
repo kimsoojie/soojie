@@ -44,6 +44,6 @@ PhD Student
     - Sep. 2020 ~ Feb. 2023.
 
 
-* **B.E.** at [Computer Engineering, Yonsei University (Wonju)](https://www.yonsei.ac.kr/wj), Wonju, South Korea.
+* **B.S.** at [Computer Engineering, Yonsei University (Wonju)](https://www.yonsei.ac.kr/wj), Wonju, South Korea.
 
     - Mar. 2012 ~ Feb. 2017.
