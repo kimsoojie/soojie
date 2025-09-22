@@ -39,9 +39,9 @@ menu:
   #  link: /resume
   #  icon: ""
 
-  #- text: Blog Posts
-  #  link: /blog
-  #  icon: ""
+  - text: Posts
+    link: /blog
+    icon: ""
 
 # Socialmedia Icons
 social_icons:
