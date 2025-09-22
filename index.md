@@ -29,6 +29,8 @@ PhD Student
 
 * Action Recognition
 
+* Zero-shot Learning
+
 ## Education
 * **Ph.D.** at [Artificial Intelligence Graduate School, Ulsan National Institute of Science and Technology (UNIST)](https://aigs.unist.ac.kr/web/index.php), Ulsan, South Korea.
 
