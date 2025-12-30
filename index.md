@@ -23,9 +23,7 @@ PhD Student
 50 UNIST-gil, Ulju, Ulsan, South Korea, 44919
 
 ## Research Interests
-* Computer Vision
-
-* Deep Learning
+* Computer Vision and Deep Learning
 
 * Omnidirectional 3D Scene Reconstruction
 
