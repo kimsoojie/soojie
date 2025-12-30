@@ -29,7 +29,7 @@ PhD Student
 
 * Omnidirectional 3D Scene Reconstruction
 
-* Multi-View Stereo Camera Calibration and Depth Estimation
+* Light Field Camera Calibration and Depth Estimation
 
 * Skeleton-based Human Action Recognition
 
