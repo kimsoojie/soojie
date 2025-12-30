@@ -33,6 +33,8 @@ PhD Student
 
 * Generalized Category Discovery for Action Recognition
 
+* Multi-modal Language Model for Action Recogition
+
 * Zero-shot Action Recognition
 
 ## Education
