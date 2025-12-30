@@ -27,9 +27,15 @@ PhD Student
 
 * Deep Learning
 
-* Action Recognition
+* Omnidirectional 3D Scene Reconstruction
 
-* Zero-shot Learning
+* Multi-view stereo camera calibration and depth estimation
+
+* Skeleton-based Human Action Recognition
+
+* Generalized Category Discovery for Action Recognition
+
+* Zero-shot Action Recognition
 
 ## Education
 * **Ph.D.** at [Artificial Intelligence Graduate School, Ulsan National Institute of Science and Technology (UNIST)](https://aigs.unist.ac.kr/web/index.php), Ulsan, South Korea.
