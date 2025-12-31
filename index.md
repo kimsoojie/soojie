@@ -25,7 +25,7 @@ PhD Student
 ## Research Interests
 * Computer Vision and Deep Learning
 
-* Omnidirectional 3D Scene Reconstruction
+* 360-degree Imaging, Omnidirectional 3D Scene Reconstruction
 
 * Light Field Camera Calibration and Depth Estimation
 
