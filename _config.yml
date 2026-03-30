@@ -45,9 +45,9 @@ menu:
 
 # Socialmedia Icons
 social_icons:
-  #- name: linkedin
-  #  link: https://www.linkedin.com/christianezeani
-  #  icon: fab fa-linkedin
+  - name: Google Scholar
+    link: https://scholar.google.com/citations?user=z3ywC-gAAAAJ&hl=ko
+    icon: fab fa-google-scholar
 
   - name: github
     link: https://github.com/kimsoojie
