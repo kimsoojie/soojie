@@ -47,7 +47,7 @@ menu:
 social_icons:
   - name: Google Scholar
     link: https://scholar.google.com/citations?user=z3ywC-gAAAAJ&hl=ko
-    icon: fab fa-google-scholar
+    icon: fab fa-graduation-cap
 
   - name: github
     link: https://github.com/kimsoojie
