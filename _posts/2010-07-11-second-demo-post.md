@@ -21,16 +21,16 @@ Vel pharetra vel turpis nunc eget lorem. Nunc sed blandit libero volutpat sed cr
 ## 2026
 
 ### CVPR
-- **SkeletonContext: Skeleton-side Context Prompt Learning for Zero-Shot Skeleton-based Action Recognition**  
+- SkeletonContext: Skeleton-side Context Prompt Learning for Zero-Shot Skeleton-based Action Recognition**  
   [[paper](https://arxiv.org/abs/2603.29692)] [[code](https://github.com/NingWang2049/skeletoncontext)]
-- **SkeletonContext: Skeleton-side Context Prompt Learning for Zero-Shot Skeleton-based Action Recognition**  
+- SkeletonContext: Skeleton-side Context Prompt Learning for Zero-Shot Skeleton-based Action Recognition**  
   [[paper](https://arxiv.org/abs/2603.29692)] [[code](https://github.com/NingWang2049/skeletoncontext)]
 
 ## 2025
 
 ### CVPR
-- **SkeletonContext: Skeleton-side Context Prompt Learning for Zero-Shot Skeleton-based Action Recognition**  
+- SkeletonContext: Skeleton-side Context Prompt Learning for Zero-Shot Skeleton-based Action Recognition**  
   [[paper](https://arxiv.org/abs/2603.29692)] [[code](https://github.com/NingWang2049/skeletoncontext)]
-- **SkeletonContext: Skeleton-side Context Prompt Learning for Zero-Shot Skeleton-based Action Recognition**  
+- SkeletonContext: Skeleton-side Context Prompt Learning for Zero-Shot Skeleton-based Action Recognition**  
   [[paper](https://arxiv.org/abs/2603.29692)] [[code](https://github.com/NingWang2049/skeletoncontext)]
 
