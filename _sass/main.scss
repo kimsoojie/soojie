@@ -54,7 +54,7 @@ h6 { font-size: .6rem; }
   width: 100vw;
   height: 100vh;
   min-height: 500px;
-  overflow: hidden;
+  /* overflow: hidden; */ 
   
   > * {
     transition: all .3s ease-in-out;
