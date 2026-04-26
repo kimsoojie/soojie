@@ -6,7 +6,7 @@ html, body {
   color: #333;
   width: 100vw;
   height: 100vh;
-  /* overflow-x: hidden;
+  /* overflow-x: hidden;*/
 }
 
 body {
@@ -82,7 +82,14 @@ h6 { font-size: .6rem; }
 
 
 table {
-  display: block;
+  width: 100%;
+  display: table;
   overflow-x: auto;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+}
+
+td, th {
+  white-space: normal;
+  word-break: break-word;
 }
