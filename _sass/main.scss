@@ -52,6 +52,44 @@ body {
   }
 }
 
+.pan-falling-sparkle {
+  position: fixed;
+  top: -2rem;
+  z-index: 100000;
+  pointer-events: none;
+  color: rgba(255, 197, 66, .9);
+  font-size: var(--pan-sparkle-size, 1rem);
+  line-height: 1;
+  text-shadow: 0 0 8px rgba(255, 219, 92, .65);
+  transform: translate3d(0, 0, 0) rotate(0deg);
+  animation: pan-falling-sparkle linear forwards;
+  user-select: none;
+}
+
+@keyframes pan-falling-sparkle {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -1rem, 0) rotate(0deg) scale(.75);
+  }
+
+  12% {
+    opacity: .9;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--pan-sparkle-drift, 0px), 105vh, 0) rotate(240deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pan-click-emoticon,
+  .pan-falling-sparkle {
+    animation: none;
+    display: none;
+  }
+}
+
 a {
   &, &:link, &:visited {
     color: rgb(0, 122, 204);
