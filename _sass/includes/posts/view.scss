@@ -32,6 +32,214 @@
 
   &__body {
     margin-bottom: 20px;
+
+    table {
+      display: table;
+      width: 100%;
+      margin: 24px 0px;
+      table-layout: fixed;
+      border-collapse: separate;
+      border-spacing: 0px;
+      overflow: hidden;
+      color: #252525;
+      font-size: 14px;
+      line-height: 1.45;
+      background: #FFF;
+      border: 1px solid #E8E8E8;
+      border-radius: 6px;
+      box-shadow: 0px 8px 24px rgba(0, 0, 0, .06);
+
+      th,
+      td {
+        padding: 12px 14px;
+        vertical-align: middle;
+        border-bottom: 1px solid #EEEEEE;
+        word-break: normal;
+        overflow-wrap: anywhere;
+      }
+
+      th {
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+        color: #111;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .02em;
+        text-transform: uppercase;
+        background: #F8F8F8;
+        border-bottom-color: #DFDFDF;
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      tbody tr:nth-child(even) {
+        background: #FCFCFC;
+      }
+
+      tbody tr:hover {
+        background: #F6FAFF;
+      }
+
+      th:first-child,
+      td:first-child {
+        width: 44%;
+        text-align: left;
+      }
+
+      th:nth-child(2),
+      td:nth-child(2),
+      th:nth-child(3),
+      td:nth-child(3) {
+        width: 9%;
+        text-align: center;
+      }
+
+      th:nth-child(4),
+      td:nth-child(4) {
+        width: 20%;
+        text-align: center;
+      }
+
+      th:nth-child(5),
+      td:nth-child(5),
+      th:nth-child(6),
+      td:nth-child(6) {
+        width: 9%;
+        text-align: center;
+      }
+
+      td:first-child {
+        font-weight: 600;
+      }
+
+      td:nth-child(4) {
+        color: #555;
+        font-size: 13px;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 56px;
+        min-height: 30px;
+        padding: 5px 10px;
+        color: #1F5FA8;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+        background: #EFF6FF;
+        border: 1px solid #D8E8FA;
+        border-radius: 4px;
+      }
+
+      a:hover {
+        color: #FFF;
+        background: #1F5FA8;
+        border-color: #1F5FA8;
+      }
+    }
+
+    @media (max-width: 760px) {
+      table {
+        display: block;
+        margin: 18px 0px;
+        font-size: 14px;
+        background: transparent;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+      }
+
+      table thead {
+        display: none;
+      }
+
+      table tbody,
+      table tr,
+      table td {
+        display: block;
+        width: 100%;
+      }
+
+      table tbody {
+        display: grid;
+        gap: 12px;
+      }
+
+      table tr {
+        padding: 14px;
+        background: #FFF;
+        border: 1px solid #E8E8E8;
+        border-radius: 6px;
+        box-shadow: 0px 6px 18px rgba(0, 0, 0, .05);
+      }
+
+      table tbody tr:nth-child(even),
+      table tbody tr:hover {
+        background: #FFF;
+      }
+
+      table td {
+        display: grid;
+        grid-template-columns: 78px minmax(0, 1fr);
+        gap: 10px;
+        align-items: start;
+        padding: 8px 0px;
+        text-align: left !important;
+        border-bottom: 1px solid #F1F1F1;
+      }
+
+      table td:last-child {
+        border-bottom: none;
+      }
+
+      table td::before {
+        color: #777;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .02em;
+        text-transform: uppercase;
+      }
+
+      table td:nth-child(1)::before {
+        content: "Title";
+      }
+
+      table td:nth-child(2)::before {
+        content: "Venue";
+      }
+
+      table td:nth-child(3)::before {
+        content: "Year";
+      }
+
+      table td:nth-child(4)::before {
+        content: "Keyword";
+      }
+
+      table td:nth-child(5)::before {
+        content: "Paper";
+      }
+
+      table td:nth-child(6)::before {
+        content: "Code";
+      }
+
+      table td:first-child {
+        font-size: 15px;
+        line-height: 1.4;
+      }
+
+      table a {
+        width: fit-content;
+        min-width: 68px;
+      }
+    }
   }
 
 }
