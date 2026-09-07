@@ -24,7 +24,7 @@ jQuery(document).ready(function () {
   })();
 
   (function () {
-    var emoticons = ['🧚🏻‍♀️', '✨', '💫', '🐰', '🍒', '💖', '🥰', '🎀', '🎉'];
+    var emoticons = ['🧚🏻‍♀️', '💘', '💕', '🤔', '🐾', '💝', '😽', '❄️', '⭐', '🥳', '🧐', '❤️', '🧡', '🍿', '🐩', '🍰', '👽', '🧑‍🎄', '💍', '🍓', '☔', '🎂', '🐹', '🥺', '🍔', '✨', '💫', '😻', '👯‍♀️', '💃', '🧞‍♀️', '🐰', '🍒', '💖', '🥰', '🎀', '🎉','💌','👀'];
 
     jQuery(document).on('click', function (e) {
       var $emoticon = jQuery('<span class="pan-click-emoticon" aria-hidden="true"></span>');
