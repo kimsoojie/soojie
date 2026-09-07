@@ -62,7 +62,7 @@ jQuery(document).ready(function () {
       var index = Math.floor(Math.random() * sparkles.length);
       var duration = 4200 + Math.random() * 3600;
       var drift = -40 + Math.random() * 80;
-      var size = 0.7 + Math.random() * 0.9;
+      var size = 1 + Math.random() * 1.1;
 
       activeSparkles += 1;
 
