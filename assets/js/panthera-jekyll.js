@@ -22,6 +22,27 @@ jQuery(document).ready(function () {
     jQuery('[data-menu-link]').removeClass('active');
     jQuery('[data-menu-link="' + $path + '"]').addClass('active');
   })();
+
+  (function () {
+    var emoticons = ['🧚🏻‍♀️', '✨', '💫', '🐰', '🍒', '💖', '🥰', '🎀', '🎉'];
+
+    jQuery(document).on('click', function (e) {
+      var $emoticon = jQuery('<span class="pan-click-emoticon" aria-hidden="true"></span>');
+      var index = Math.floor(Math.random() * emoticons.length);
+
+      $emoticon
+        .text(emoticons[index])
+        .css({
+          left: e.clientX + 'px',
+          top: e.clientY + 'px'
+        })
+        .appendTo(document.body);
+
+      $emoticon.on('animationend webkitAnimationEnd', function () {
+        $emoticon.remove();
+      });
+    });
+  })();
   
 });
 

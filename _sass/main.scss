@@ -24,6 +24,34 @@ body {
   box-sizing: border-box;
 }
 
+.pan-click-emoticon {
+  position: fixed;
+  z-index: 100001;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: pan-click-emoticon-pop .9s ease-out forwards;
+  font-size: 1.6rem;
+  line-height: 1;
+  user-select: none;
+}
+
+@keyframes pan-click-emoticon-pop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -35%) scale(.75) rotate(-8deg);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -70%) scale(1.1) rotate(6deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -150%) scale(.9) rotate(12deg);
+  }
+}
+
 a {
   &, &:link, &:visited {
     color: rgb(0, 122, 204);
