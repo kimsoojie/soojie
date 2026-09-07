@@ -45,9 +45,9 @@ jQuery(document).ready(function () {
   })();
 
   (function () {
-    var sparkles = ['💜', '💖', '✨', '🎀', '💕', '😇', '🧚‍♀️'];
+    var sparkles = ['💜', '💖', '✨', '🎀', '💕', '🍰', '🧚‍♀️', '🍒'];
     var activeSparkles = 0;
-    var maxSparkles = 18;
+    var maxSparkles = 20;
 
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       return;
