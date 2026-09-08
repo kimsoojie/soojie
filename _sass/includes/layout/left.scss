@@ -159,8 +159,7 @@
       &:hover {
         background-color: rgba(255, 255, 255, .1);
 
-        .pan-layout-left__menu-label::before,
-        .pan-layout-left__menu-label::after {
+        .pan-layout-left__sparkle {
           opacity: 1;
         }
       }
@@ -168,8 +167,7 @@
       &.active {
         background-color: rgba(255, 255, 255, .3) !important;
 
-        .pan-layout-left__menu-label::before,
-        .pan-layout-left__menu-label::after {
+        .pan-layout-left__sparkle {
           opacity: .9;
         }
       }
@@ -186,31 +184,45 @@
   &__menu-label {
     display: inline-block;
     position: relative;
+  }
 
-    &::before,
-    &::after {
-      position: absolute;
-      color: #fff7b2;
-      font-size: .7rem;
-      line-height: 1;
-      opacity: .45;
-      pointer-events: none;
-      text-shadow: 0 0 7px rgba(255, 233, 126, .9);
-      animation: pan-menu-sparkle 1.8s ease-in-out infinite;
-    }
+  &__sparkle {
+    position: absolute;
+    color: #fff0ad;
+    font-size: .85rem;
+    line-height: 1;
+    opacity: .7;
+    pointer-events: none;
+    text-shadow: 0 0 5px #fff, 0 0 11px rgba(255, 185, 211, .95);
+    animation: pan-menu-sparkle 1.5s ease-in-out infinite;
+  }
 
-    &::before {
-      content: '✦';
-      top: -.7rem;
-      right: -1rem;
-    }
+  &__sparkle--one {
+    top: -.85rem;
+    right: -.95rem;
+  }
 
-    &::after {
-      content: '✧';
-      top: .75rem;
-      right: -.55rem;
-      animation-delay: -.9s;
-    }
+  &__sparkle--two {
+    top: .72rem;
+    right: -.55rem;
+    color: #ffd1e2;
+    font-size: .72rem;
+    animation-delay: -.38s;
+  }
+
+  &__sparkle--three {
+    top: -.35rem;
+    left: -1.05rem;
+    color: #ffd1e2;
+    font-size: .6rem;
+    animation-delay: -.82s;
+  }
+
+  &__sparkle--four {
+    top: 1.05rem;
+    left: -.55rem;
+    font-size: .5rem;
+    animation-delay: -1.15s;
   }
 
   &__close {
@@ -237,8 +249,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pan-layout-left__menu-label::before,
-  .pan-layout-left__menu-label::after {
+  .pan-layout-left__sparkle {
     animation: none;
   }
 }
