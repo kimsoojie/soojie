@@ -24,7 +24,7 @@ jQuery(document).ready(function () {
   })();
 
   (function () {
-    var emoticons = ['🧚🏻‍♀️', '💘', '💕', '🤔', '🐾', '💝', '😽', '❄️', '⭐', '🥳', '🧐', '❤️', '🧡', '🍿', '🐩', '🍰', '👽', '🧑‍🎄', '💍', '🍓', '☔', '🎂', '🐹', '🥺', '🍔', '✨', '💫', '😻', '👯‍♀️', '💃', '🧞‍♀️', '🐰', '🍒', '💖', '🥰', '🎀', '🎉','💌','👀'];
+    var emoticons = ['🧚🏻‍♀️', '💘', '💕', '🤔', '🐾', '💝', '😽', '❄️', '⭐', '🥳', '🧐', '❤️', '🧡', '🍿', '🐩', '🍰', '👽', '🧑‍🎄', '💍', '🍓', '🍑', '☔', '🎂', '🐹', '🥺', '🍔', '✨', '💫', '😻', '👯‍♀️', '💃', '🧞‍♀️', '🐰', '🍒', '💖', '🥰', '🎀', '🎉','💌','👀'];
 
     jQuery(document).on('click', function (e) {
       var $emoticon = jQuery('<span class="pan-click-emoticon" aria-hidden="true"></span>');
@@ -45,7 +45,7 @@ jQuery(document).ready(function () {
   })();
 
   (function () {
-    var sparkles = ['💜', '🍬', '🍦', '💖', '✨', '🎀', '💕', '🍰', '🧚‍♀️', '🍒', '⭐', '🍊'];
+    var sparkles = ['🩵', '🎉', '🍋', '🎁', '🎈', '🍬', '🍦', '🩶', '💖', '✨', '🎀', '💕', '🍰', '🧚‍♀️', '🍒', '⭐', '🍊'];
     var activeSparkles = 0;
     var maxSparkles = 40;
 
@@ -62,7 +62,7 @@ jQuery(document).ready(function () {
       var index = Math.floor(Math.random() * sparkles.length);
       var duration = 4200 + Math.random() * 3600;
       var drift = -40 + Math.random() * 80;
-      var size = 1.3 + Math.random() * 1.4;
+      var size = 1 + Math.random() * 1.1;
 
       activeSparkles += 1;
 
