@@ -58,7 +58,7 @@ body {
   z-index: 100000;
   pointer-events: none;
   color: rgba(255, 197, 66, .9);
-  font-size: var(--pan-sparkle-size, 1rem);
+  font-size: var(--pan-sparkle-size, 1.3rem);
   line-height: 1;
   text-shadow: 0 0 8px rgba(255, 219, 92, .65);
   transform: translate3d(0, 0, 0) rotate(0deg);
