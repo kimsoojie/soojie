@@ -45,7 +45,7 @@ jQuery(document).ready(function () {
   })();
 
   (function () {
-    var sparkles = ['💜', '🎉', '🍬', '🍦', '🍭', '🫧', '💖', '✨', '🎀', '💕', '🍰', '🧚‍♀️', '🍒', '⭐', '🍊'];
+    var sparkles = ['💝', '🎉', '🍬', '🍦', '🍭', '🫧', '💖', '✨', '🎀', '💕', '🍰', '🧚‍♀️', '🍒', '⭐', '🍊'];
     var activeSparkles = 0;
     var maxSparkles = 40;
 
