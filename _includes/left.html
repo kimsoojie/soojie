@@ -53,7 +53,7 @@
     <ul class="pan-layout-left__menu">
       {% for menu in site.menu %}
       <li data-menu-link="{{ menu.link }}">
-        <a href="{{ menu.link | relative_url }}">{{ menu.text }}</a>
+        <a href="{{ menu.link | relative_url }}"><span class="pan-layout-left__menu-label">{{ menu.text }}</span></a>
       </li>
       {% endfor %}
     </ul>
