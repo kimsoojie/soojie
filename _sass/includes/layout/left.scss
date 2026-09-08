@@ -188,12 +188,12 @@
 
   &__sparkle {
     position: absolute;
-    color: #fff0ad;
+    color: #fff9cf;
     font-size: .85rem;
     line-height: 1;
-    opacity: .7;
+    opacity: .9;
     pointer-events: none;
-    text-shadow: 0 0 5px #fff, 0 0 11px rgba(255, 185, 211, .95);
+    text-shadow: 0 0 4px #fff, 0 0 9px #fff, 0 0 16px rgba(255, 168, 204, 1);
     animation: pan-menu-sparkle 1.5s ease-in-out infinite;
   }
 
@@ -205,7 +205,7 @@
   &__sparkle--two {
     top: .72rem;
     right: -.55rem;
-    color: #ffd1e2;
+    color: #ffe1ec;
     font-size: .72rem;
     animation-delay: -.38s;
   }
@@ -213,7 +213,7 @@
   &__sparkle--three {
     top: -.35rem;
     left: -1.05rem;
-    color: #ffd1e2;
+    color: #ffe1ec;
     font-size: .6rem;
     animation-delay: -.82s;
   }
@@ -240,10 +240,12 @@
 
 @keyframes pan-menu-sparkle {
   0%, 100% {
+    opacity: .65;
     transform: scale(.65) rotate(0deg);
   }
 
   50% {
+    opacity: 1;
     transform: scale(1.25) rotate(22deg);
   }
 }
