@@ -1,12 +1,24 @@
-{% assign gallery_photos = site.static_files | where_exp: "photo", "photo.path contains '/assets/photo/' or photo.path contains '/assets/images/photo/'" | where_exp: "photo", "photo.extname != '.heic' and photo.extname != '.HEIC' and photo.extname != '.mov' and photo.extname != '.MOV'" | sort: "path" %}
-{% if gallery_photos.size > 0 %}
-  {% assign gallery_first_photo = gallery_photos.first %}
-{% endif %}
+{% assign gallery_photo_count = 0 %}
+{% assign gallery_first_photo = nil %}
+{% for photo in site.static_files %}
+  {% assign photo_ext = photo.extname | downcase %}
+  {% assign in_photo_folder = false %}
+  {% if photo.path contains '/assets/photo/' %}{% assign in_photo_folder = true %}{% endif %}
+  {% if photo.path contains '/assets/images/photo/' %}{% assign in_photo_folder = true %}{% endif %}
+  {% if in_photo_folder %}
+    {% if photo_ext != '.heic' %}
+      {% if photo_ext != '.mov' %}
+        {% assign gallery_photo_count = gallery_photo_count | plus: 1 %}
+        {% if gallery_first_photo == nil %}{% assign gallery_first_photo = photo %}{% endif %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
 <aside class="photo-gallery" aria-label="Photo gallery">
   <div class="photo-gallery__header">
     <div class="photo-gallery__controls">
-      <span class="photo-gallery__count" aria-live="polite">1 / {% if gallery_photos.size > 0 %}{{ gallery_photos.size }}{% else %}4{% endif %}</span>
+      <span class="photo-gallery__count" aria-live="polite">1 / {% if gallery_photo_count > 0 %}{{ gallery_photo_count }}{% else %}4{% endif %}</span>
       <button type="button" class="photo-gallery__control photo-gallery__control--previous" aria-label="Previous photo">
         <i class="fas fa-chevron-left" aria-hidden="true"></i>
       </button>
@@ -17,7 +29,7 @@
   </div>
 
   <div class="photo-gallery__stage">
-    <img class="photo-gallery__main-image" src="{% if gallery_photos.size > 0 %}{{ gallery_first_photo.path | relative_url }}{% else %}{{ '/assets/images/left-background.jpg' | relative_url }}{% endif %}" alt="Photo 1" loading="eager">
+    <img class="photo-gallery__main-image" src="{% if gallery_photo_count > 0 %}{{ gallery_first_photo.path | relative_url }}{% else %}{{ '/assets/images/left-background.jpg' | relative_url }}{% endif %}" alt="Photo 1" loading="eager">
     <button type="button" class="photo-gallery__stage-control photo-gallery__stage-control--previous" aria-label="Previous photo">
       <i class="fas fa-chevron-left" aria-hidden="true"></i>
     </button>
@@ -27,11 +39,19 @@
   </div>
 
   <div class="photo-gallery__thumbnails" role="tablist" aria-label="Choose a photo">
-    {% if gallery_photos.size > 0 %}
-      {% for photo in gallery_photos %}
-    <button type="button" class="photo-gallery__thumbnail{% if forloop.first %} is-active{% endif %}" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-photo-src="{{ photo.path | relative_url }}" data-photo-alt="Photo {{ forloop.index }}">
+    {% if gallery_photo_count > 0 %}
+      {% assign gallery_rendered_index = 0 %}
+      {% for photo in site.static_files %}
+        {% assign photo_ext = photo.extname | downcase %}
+        {% assign in_photo_folder = false %}
+        {% if photo.path contains '/assets/photo/' %}{% assign in_photo_folder = true %}{% endif %}
+        {% if photo.path contains '/assets/images/photo/' %}{% assign in_photo_folder = true %}{% endif %}
+        {% if in_photo_folder and photo_ext != '.heic' and photo_ext != '.mov' %}
+    <button type="button" class="photo-gallery__thumbnail{% if gallery_rendered_index == 0 %} is-active{% endif %}" role="tab" aria-selected="{% if gallery_rendered_index == 0 %}true{% else %}false{% endif %}" data-photo-src="{{ photo.path | relative_url }}" data-photo-alt="Photo {{ gallery_rendered_index | plus: 1 }}">
       <img src="{{ photo.path | relative_url }}" alt="" loading="lazy">
     </button>
+          {% assign gallery_rendered_index = gallery_rendered_index | plus: 1 %}
+        {% endif %}
       {% endfor %}
     {% else %}
     <button type="button" class="photo-gallery__thumbnail is-active" role="tab" aria-selected="true" data-photo-src="{{ '/assets/images/left-background.jpg' | relative_url }}" data-photo-alt="Photo 1">
