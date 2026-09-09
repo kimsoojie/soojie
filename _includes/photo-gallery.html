@@ -1,4 +1,4 @@
-{% assign gallery_photos = site.static_files | where_exp: "photo", "photo.path contains '/assets/photo/' or photo.path contains '/assets/images/photo/'" | where_exp: "photo", "photo.extname != '.heic' and photo.extname != '.HEIC'" | sort: "path" %}
+{% assign gallery_photos = site.static_files | where_exp: "photo", "photo.path contains '/assets/photo/' or photo.path contains '/assets/images/photo/'" | where_exp: "photo", "photo.extname != '.heic' and photo.extname != '.HEIC' and photo.extname != '.mov' and photo.extname != '.MOV'" | sort: "path" %}
 {% if gallery_photos.size > 0 %}
   {% assign gallery_first_photo = gallery_photos.first %}
 {% endif %}
