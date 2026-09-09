@@ -19,8 +19,8 @@
 .photo-gallery {
   float: right;
   width: min(100%, 500px);
-  margin: 5px 0 28px 48px;
-  padding: 20px 32px 36px;
+  margin: 5px 32px 28px 48px;
+  padding: 12px 14px 16px;
   border: 1px solid #e8edf4;
   border-radius: 14px;
   background: rgba(255, 255, 255, .94);
@@ -29,20 +29,9 @@
   &__header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 16px;
-    margin-bottom: 18px;
-
-    h2 {
-      margin: 0;
-      color: #102a46;
-      font-size: 1.25rem;
-
-      i {
-        margin-right: 10px;
-        color: #50677d;
-      }
-    }
+    margin-bottom: 10px;
   }
 
   &__controls { display: flex; align-items: center; gap: 12px; }
@@ -123,7 +112,7 @@
   .photo-gallery {
     width: min(48%, 500px);
     margin-left: 32px;
-    padding: 18px 20px 24px;
+    padding: 12px 14px 16px;
 
     &__stage { height: min(48vw, 475px); }
     &__thumbnails { gap: 10px; margin-top: 16px; }
