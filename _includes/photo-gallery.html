@@ -1,7 +1,12 @@
+{% assign gallery_photos = site.static_files | where_exp: "photo", "photo.path contains '/assets/photo/' or photo.path contains '/assets/images/photo/'" | where_exp: "photo", "photo.extname != '.heic' and photo.extname != '.HEIC'" | sort: "path" %}
+{% if gallery_photos.size > 0 %}
+  {% assign gallery_first_photo = gallery_photos.first %}
+{% endif %}
+
 <aside class="photo-gallery" aria-label="Photo gallery">
   <div class="photo-gallery__header">
     <div class="photo-gallery__controls">
-      <span class="photo-gallery__count" aria-live="polite">1 / 4</span>
+      <span class="photo-gallery__count" aria-live="polite">1 / {% if gallery_photos.size > 0 %}{{ gallery_photos.size }}{% else %}4{% endif %}</span>
       <button type="button" class="photo-gallery__control photo-gallery__control--previous" aria-label="Previous photo">
         <i class="fas fa-chevron-left" aria-hidden="true"></i>
       </button>
@@ -12,7 +17,7 @@
   </div>
 
   <div class="photo-gallery__stage">
-    <img class="photo-gallery__main-image" src="{{ '/assets/images/left-background.jpg' | relative_url }}" alt="Photo 1" loading="eager">
+    <img class="photo-gallery__main-image" src="{% if gallery_photos.size > 0 %}{{ gallery_first_photo.path | relative_url }}{% else %}{{ '/assets/images/left-background.jpg' | relative_url }}{% endif %}" alt="Photo 1" loading="eager">
     <button type="button" class="photo-gallery__stage-control photo-gallery__stage-control--previous" aria-label="Previous photo">
       <i class="fas fa-chevron-left" aria-hidden="true"></i>
     </button>
@@ -22,6 +27,13 @@
   </div>
 
   <div class="photo-gallery__thumbnails" role="tablist" aria-label="Choose a photo">
+    {% if gallery_photos.size > 0 %}
+      {% for photo in gallery_photos %}
+    <button type="button" class="photo-gallery__thumbnail{% if forloop.first %} is-active{% endif %}" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-photo-src="{{ photo.path | relative_url }}" data-photo-alt="Photo {{ forloop.index }}">
+      <img src="{{ photo.path | relative_url }}" alt="" loading="lazy">
+    </button>
+      {% endfor %}
+    {% else %}
     <button type="button" class="photo-gallery__thumbnail is-active" role="tab" aria-selected="true" data-photo-src="{{ '/assets/images/left-background.jpg' | relative_url }}" data-photo-alt="Photo 1">
       <img src="{{ '/assets/images/left-background.jpg' | relative_url }}" alt="" loading="lazy">
     </button>
@@ -34,5 +46,6 @@
     <button type="button" class="photo-gallery__thumbnail" role="tab" aria-selected="false" data-photo-src="{{ '/assets/images/left-background_3.jpg' | relative_url }}" data-photo-alt="Photo 4">
       <img src="{{ '/assets/images/left-background_3.jpg' | relative_url }}" alt="" loading="lazy">
     </button>
+    {% endif %}
   </div>
 </aside>
