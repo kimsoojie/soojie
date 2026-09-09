@@ -32,6 +32,25 @@ jQuery(document).ready(function () {
     var $count = $gallery.find('.photo-gallery__count');
     var activeIndex = 0;
 
+    function photoName($thumbnail) {
+      return String($thumbnail.data('photo-src')).split('/').pop().replace(/\.[^.]+$/, '');
+    }
+
+    var sortedThumbnails = $thumbnails.get().sort(function (first, second) {
+      var firstName = photoName(jQuery(first));
+      var secondName = photoName(jQuery(second));
+      var firstNumber = /^\d+$/.test(firstName) ? Number(firstName) : Number.POSITIVE_INFINITY;
+      var secondNumber = /^\d+$/.test(secondName) ? Number(secondName) : Number.POSITIVE_INFINITY;
+
+      if (firstNumber !== secondNumber) { return firstNumber - secondNumber; }
+      return firstName.localeCompare(secondName, undefined, { numeric: true, sensitivity: 'base' });
+    });
+
+    jQuery.each(sortedThumbnails, function (_, thumbnail) {
+      $gallery.find('.photo-gallery__thumbnails').append(thumbnail);
+    });
+    $thumbnails = $gallery.find('.photo-gallery__thumbnail');
+
     function showPhoto(index) {
       activeIndex = (index + $thumbnails.length) % $thumbnails.length;
       var $thumbnail = $thumbnails.eq(activeIndex);
