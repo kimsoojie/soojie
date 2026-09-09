@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% include photo-gallery.html %}
+
 # Soojie Kim (김수지)
 
 PhD Student

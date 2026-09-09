@@ -1,0 +1,39 @@
+<aside class="photo-gallery" aria-label="Photo gallery">
+  <div class="photo-gallery__header">
+    <h2><i class="fas fa-camera" aria-hidden="true"></i> Photos</h2>
+    <div class="photo-gallery__controls">
+      <span class="photo-gallery__count" aria-live="polite">1 / 4</span>
+      <button type="button" class="photo-gallery__control photo-gallery__control--previous" aria-label="Previous photo">
+        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="photo-gallery__control photo-gallery__control--next" aria-label="Next photo">
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="photo-gallery__stage">
+    <img class="photo-gallery__main-image" src="{{ '/assets/images/left-background.jpg' | relative_url }}" alt="Photo 1" loading="eager">
+    <button type="button" class="photo-gallery__stage-control photo-gallery__stage-control--previous" aria-label="Previous photo">
+      <i class="fas fa-chevron-left" aria-hidden="true"></i>
+    </button>
+    <button type="button" class="photo-gallery__stage-control photo-gallery__stage-control--next" aria-label="Next photo">
+      <i class="fas fa-chevron-right" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="photo-gallery__thumbnails" role="tablist" aria-label="Choose a photo">
+    <button type="button" class="photo-gallery__thumbnail is-active" role="tab" aria-selected="true" data-photo-src="{{ '/assets/images/left-background.jpg' | relative_url }}" data-photo-alt="Photo 1">
+      <img src="{{ '/assets/images/left-background.jpg' | relative_url }}" alt="" loading="lazy">
+    </button>
+    <button type="button" class="photo-gallery__thumbnail" role="tab" aria-selected="false" data-photo-src="{{ '/assets/images/left-background-1.jpg' | relative_url }}" data-photo-alt="Photo 2">
+      <img src="{{ '/assets/images/left-background-1.jpg' | relative_url }}" alt="" loading="lazy">
+    </button>
+    <button type="button" class="photo-gallery__thumbnail" role="tab" aria-selected="false" data-photo-src="{{ '/assets/images/left-background_2.jpg' | relative_url }}" data-photo-alt="Photo 3">
+      <img src="{{ '/assets/images/left-background_2.jpg' | relative_url }}" alt="" loading="lazy">
+    </button>
+    <button type="button" class="photo-gallery__thumbnail" role="tab" aria-selected="false" data-photo-src="{{ '/assets/images/left-background_3.jpg' | relative_url }}" data-photo-alt="Photo 4">
+      <img src="{{ '/assets/images/left-background_3.jpg' | relative_url }}" alt="" loading="lazy">
+    </button>
+  </div>
+</aside>

@@ -24,6 +24,41 @@ jQuery(document).ready(function () {
   })();
 
   (function () {
+    var $gallery = jQuery('.photo-gallery');
+    if (!$gallery.length) { return; }
+
+    var $image = $gallery.find('.photo-gallery__main-image');
+    var $thumbnails = $gallery.find('.photo-gallery__thumbnail');
+    var $count = $gallery.find('.photo-gallery__count');
+    var activeIndex = 0;
+
+    function showPhoto(index) {
+      activeIndex = (index + $thumbnails.length) % $thumbnails.length;
+      var $thumbnail = $thumbnails.eq(activeIndex);
+
+      $image.addClass('is-changing');
+      window.setTimeout(function () {
+        $image.attr({ src: $thumbnail.data('photo-src'), alt: $thumbnail.data('photo-alt') });
+        $image.removeClass('is-changing');
+      }, 120);
+
+      $thumbnails.removeClass('is-active').attr('aria-selected', 'false');
+      $thumbnail.addClass('is-active').attr('aria-selected', 'true');
+      $count.text((activeIndex + 1) + ' / ' + $thumbnails.length);
+    }
+
+    $gallery.on('click', '.photo-gallery__thumbnail', function () {
+      showPhoto($thumbnails.index(this));
+    });
+    $gallery.on('click', '.photo-gallery__control--previous, .photo-gallery__stage-control--previous', function () {
+      showPhoto(activeIndex - 1);
+    });
+    $gallery.on('click', '.photo-gallery__control--next, .photo-gallery__stage-control--next', function () {
+      showPhoto(activeIndex + 1);
+    });
+  })();
+
+  (function () {
     var emoticons = ['🧚🏻‍♀️', '💘', '💕', '🤔', '🐾', '💝', '😽', '❄️', '⭐', '🥳', '🧐', '❤️', '🧡', '🍿', '🐩', '🍰', '👽', '🧑‍🎄', '💍', '🍓', '🍑', '☔', '🎂', '🐹', '🥺', '🍔', '✨', '💫', '😻', '👯‍♀️', '💃', '🧞‍♀️', '🐰', '🍒', '💖', '🥰', '🎀', '🎉','💌','👀'];
 
     jQuery(document).on('click', function (e) {
