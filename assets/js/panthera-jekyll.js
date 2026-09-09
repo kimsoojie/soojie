@@ -31,6 +31,7 @@ jQuery(document).ready(function () {
     var $thumbnails = $gallery.find('.photo-gallery__thumbnail');
     var $count = $gallery.find('.photo-gallery__count');
     var activeIndex = 0;
+    var thumbnailWindowSize = 8;
 
     function photoName($thumbnail) {
       return String($thumbnail.data('photo-src')).split('/').pop().replace(/\.[^.]+$/, '');
@@ -51,6 +52,16 @@ jQuery(document).ready(function () {
     });
     $thumbnails = $gallery.find('.photo-gallery__thumbnail');
 
+    function updateThumbnailWindow() {
+      var maxStart = Math.max(0, $thumbnails.length - thumbnailWindowSize);
+      var start = Math.min(Math.max(0, activeIndex - thumbnailWindowSize + 1), maxStart);
+      $thumbnails.each(function (index) {
+        jQuery(this).toggleClass('is-hidden', index < start || index >= start + thumbnailWindowSize);
+      });
+    }
+
+    updateThumbnailWindow();
+
     function showPhoto(index) {
       activeIndex = (index + $thumbnails.length) % $thumbnails.length;
       var $thumbnail = $thumbnails.eq(activeIndex);
@@ -64,6 +75,7 @@ jQuery(document).ready(function () {
       $thumbnails.removeClass('is-active').attr('aria-selected', 'false');
       $thumbnail.addClass('is-active').attr('aria-selected', 'true');
       $count.text((activeIndex + 1) + ' / ' + $thumbnails.length);
+      updateThumbnailWindow();
     }
 
     $gallery.on('click', '.photo-gallery__thumbnail', function () {
