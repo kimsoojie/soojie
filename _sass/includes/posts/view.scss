@@ -166,6 +166,15 @@
         width: 100%;
       }
 
+      table td:first-child,
+      table td:nth-child(2),
+      table td:nth-child(3),
+      table td:nth-child(4),
+      table td:nth-child(5),
+      table td:nth-child(6) {
+        width: 100%;
+      }
+
       table tbody {
         display: grid;
         gap: 12px;
