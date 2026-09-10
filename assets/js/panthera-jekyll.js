@@ -30,6 +30,8 @@ jQuery(document).ready(function () {
     var $image = $gallery.find('.photo-gallery__main-image');
     var $thumbnails = $gallery.find('.photo-gallery__thumbnail');
     var $count = $gallery.find('.photo-gallery__count');
+    var $caption = $gallery.find('.photo-gallery__caption');
+    var captions = {};
     var activeIndex = 0;
     var thumbnailWindowSize = 8;
 
@@ -51,6 +53,56 @@ jQuery(document).ready(function () {
       $gallery.find('.photo-gallery__thumbnails').append(thumbnail);
     });
     $thumbnails = $gallery.find('.photo-gallery__thumbnail');
+
+    function photoFile($thumbnail) {
+      return String($thumbnail.data('photo-src')).split('/').pop();
+    }
+
+    function updateCaption($thumbnail) {
+      $caption.text(captions[photoFile($thumbnail)] || '');
+    }
+
+    function parseCaptions(text) {
+      var lines = text.split(/\r?\n/);
+      var parsed = {};
+
+      for (var index = 0; index < lines.length; index += 1) {
+        var fileName = jQuery.trim(lines[index]);
+        if (!/\.(jpe?g|png|gif|webp)$/i.test(fileName)) { continue; }
+
+        var commentLines = [];
+        index += 1;
+        while (index < lines.length && jQuery.trim(lines[index]) !== '') {
+          commentLines.push(lines[index]);
+          index += 1;
+        }
+        parsed[fileName] = jQuery.trim(commentLines.join('\n'));
+      }
+
+      return parsed;
+    }
+
+    function loadCaptions() {
+      var captionPaths = [
+        $gallery.data('caption-txt-src'),
+        $gallery.data('caption-src')
+      ];
+
+      function requestCaption(pathIndex) {
+        if (pathIndex >= captionPaths.length) { return; }
+
+        jQuery.get(captionPaths[pathIndex])
+          .done(function (text) {
+            captions = parseCaptions(text);
+            updateCaption($thumbnails.eq(activeIndex));
+          })
+          .fail(function () {
+            requestCaption(pathIndex + 1);
+          });
+      }
+
+      requestCaption(0);
+    }
 
     function updateThumbnailWindow() {
       var maxStart = Math.max(0, $thumbnails.length - thumbnailWindowSize);
@@ -75,6 +127,7 @@ jQuery(document).ready(function () {
       $thumbnails.removeClass('is-active').attr('aria-selected', 'false');
       $thumbnail.addClass('is-active').attr('aria-selected', 'true');
       $count.text((activeIndex + 1) + ' / ' + $thumbnails.length);
+      updateCaption($thumbnail);
       updateThumbnailWindow();
     }
 
@@ -87,6 +140,8 @@ jQuery(document).ready(function () {
     $gallery.on('click', '.photo-gallery__control--next, .photo-gallery__stage-control--next', function () {
       showPhoto(activeIndex + 1);
     });
+
+    loadCaptions();
   })();
 
   (function () {

@@ -19,7 +19,7 @@
 .photo-gallery {
   float: right;
   width: min(100%, 500px);
-  margin: 5px 32px 28px 48px;
+  margin: 18px 32px 28px 48px;
   padding: 12px 14px 16px;
   border: 0;
   background: transparent;
@@ -70,6 +70,45 @@
     &.is-changing { opacity: .35; }
   }
 
+  &__caption {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    z-index: 2;
+    max-width: min(62%, 260px);
+    padding: 13px 18px 15px;
+    border-radius: 7px;
+    color: #5f4d58;
+    background: #ffe2eb;
+    box-shadow: 0 8px 22px rgba(52, 36, 44, .16);
+    font-family: "Comic Sans MS", "Bradley Hand", cursive;
+    font-size: 1rem;
+    line-height: 1.35;
+    text-align: center;
+    transform: rotate(-7deg);
+    transform-origin: 28px 18px;
+    transition: opacity .18s ease, transform .18s ease;
+    white-space: pre-line;
+
+    &:empty {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -9px;
+      left: 18px;
+      width: 54px;
+      height: 18px;
+      border-radius: 2px;
+      background: rgba(255, 247, 191, .84);
+      box-shadow: 0 2px 7px rgba(52, 36, 44, .08);
+      transform: rotate(5deg);
+    }
+  }
+
   &__stage-control {
     position: absolute;
     top: 50%;
@@ -111,7 +150,7 @@
 @media (max-width: 1220px) {
   .photo-gallery {
     width: min(48%, 500px);
-    margin-left: 32px;
+    margin: 18px 32px 28px 32px;
     padding: 12px 14px 16px;
 
     &__stage { height: min(48vw, 475px); }
@@ -126,5 +165,10 @@
     margin: 0 0 28px;
 
     &__stage { height: min(110vw, 560px); }
+    &__caption {
+      max-width: 68%;
+      padding: 10px 14px 12px;
+      font-size: .88rem;
+    }
   }
 }

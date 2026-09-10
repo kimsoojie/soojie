@@ -15,7 +15,7 @@
   {% endif %}
 {% endfor %}
 
-<aside class="photo-gallery" aria-label="Photo gallery">
+<aside class="photo-gallery" aria-label="Photo gallery" data-caption-src="{{ '/assets/images/photo/caption' | relative_url }}" data-caption-txt-src="{{ '/assets/images/photo/caption.txt' | relative_url }}">
   <div class="photo-gallery__header">
     <div class="photo-gallery__controls">
       <span class="photo-gallery__count" aria-live="polite">1 / {% if gallery_photo_count > 0 %}{{ gallery_photo_count }}{% else %}4{% endif %}</span>
@@ -30,6 +30,7 @@
 
   <div class="photo-gallery__stage">
     <img class="photo-gallery__main-image" src="{% if gallery_photo_count > 0 %}{{ gallery_first_photo.path | relative_url }}{% else %}{{ '/assets/images/left-background.jpg' | relative_url }}{% endif %}" alt="Photo 1" loading="eager">
+    <div class="photo-gallery__caption" aria-live="polite"></div>
     <button type="button" class="photo-gallery__stage-control photo-gallery__stage-control--previous" aria-label="Previous photo">
       <i class="fas fa-chevron-left" aria-hidden="true"></i>
     </button>
