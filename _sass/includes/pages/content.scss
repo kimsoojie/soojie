@@ -80,9 +80,9 @@
     max-width: min(62%, 260px);
     padding: 13px 18px 15px;
     border-radius: 7px;
-    color: #7a3f4b;
-    background: #ffd3c8;
-    box-shadow: 0 8px 22px rgba(96, 54, 62, .16);
+    color: #fff6fb;
+    background: #173b63;
+    box-shadow: 0 8px 22px rgba(22, 42, 68, .2);
     font-family: "Comic Sans MS", "Bradley Hand", cursive;
     font-size: 1rem;
     line-height: 1.35;
@@ -105,8 +105,8 @@
       width: 54px;
       height: 18px;
       border-radius: 2px;
-      background: rgba(236, 178, 158, .84);
-      box-shadow: 0 2px 7px rgba(96, 54, 62, .1);
+      background: rgba(246, 183, 202, .9);
+      box-shadow: 0 2px 7px rgba(22, 42, 68, .12);
       transform: rotate(5deg);
     }
   }
@@ -121,12 +121,12 @@
   &__sparkle {
     position: absolute;
     z-index: 2;
-    color: #6f2f23;
+    color: #ffd2e1;
     font-size: .92rem;
     line-height: 1;
     opacity: .96;
     pointer-events: none;
-    text-shadow: 0 0 2px #fff7fb, 0 0 7px rgba(255, 179, 205, .98), 0 0 15px rgba(255, 196, 216, .92);
+    text-shadow: 0 0 2px #fffafd, 0 0 8px rgba(255, 190, 213, .98), 0 0 16px rgba(255, 217, 230, .9);
     animation: pan-caption-heart-float 2.45s ease-in-out infinite;
   }
 
@@ -138,7 +138,7 @@
   &__sparkle--two {
     top: .88rem;
     right: .3rem;
-    color: #7a3328;
+    color: #ffc5d8;
     font-size: .74rem;
     animation-delay: -.68s;
   }
@@ -146,7 +146,7 @@
   &__sparkle--three {
     bottom: .28rem;
     left: .46rem;
-    color: #5f281f;
+    color: #ffdae7;
     font-size: .7rem;
     animation-delay: -1.24s;
   }
@@ -154,34 +154,9 @@
   &__sparkle--four {
     top: .34rem;
     left: .44rem;
-    color: #84382b;
+    color: #ffbfd4;
     font-size: .66rem;
     animation-delay: -1.78s;
-  }
-
-  &__star {
-    position: absolute;
-    z-index: 3;
-    color: #ffb3cd;
-    font-size: .72rem;
-    line-height: 1;
-    opacity: .95;
-    pointer-events: none;
-    text-shadow: 0 0 2px #fffaff, 0 0 7px rgba(255, 179, 205, 1), 0 0 14px rgba(255, 205, 222, .95);
-    animation: pan-caption-star-twinkle 1.65s ease-in-out infinite;
-  }
-
-  &__star--one {
-    top: -.24rem;
-    right: 1.02rem;
-  }
-
-  &__star--two {
-    bottom: .72rem;
-    left: .94rem;
-    color: #ffc4d9;
-    font-size: .58rem;
-    animation-delay: -.74s;
   }
 
   &__stage-control {
@@ -238,18 +213,6 @@
   }
 }
 
-@keyframes pan-caption-star-twinkle {
-  0%, 100% {
-    opacity: .48;
-    transform: rotate(-12deg) scale(.68);
-  }
-
-  50% {
-    opacity: 1;
-    transform: rotate(12deg) scale(1.22);
-  }
-}
-
 @media (max-width: 1220px) {
   .photo-gallery {
     width: min(48%, 500px);
@@ -277,8 +240,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .photo-gallery__sparkle,
-  .photo-gallery__star {
+  .photo-gallery__sparkle {
     animation: none;
   }
 }
