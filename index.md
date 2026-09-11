@@ -27,17 +27,7 @@ PhD Student
 ## Research Interests
 * Computer Vision and Deep Learning
 
-* 360-degree Imaging, Omnidirectional 3D Scene Reconstruction
-
-* Light Field Camera Calibration and Depth Estimation
-
-* Skeleton-based Human Action Recognition
-
-* Generalized Category Discovery for Action Recognition
-
-* Multi-modal Language Model for Action Recogition
-
-* Zero-shot Action Recognition
+* Zero-shot Human Action Recognition
 
 ## Education
 * **Ph.D.** at [Artificial Intelligence Graduate School, Ulsan National Institute of Science and Technology (UNIST)](https://aigs.unist.ac.kr/web/index.php), Ulsan, South Korea.
@@ -52,6 +42,8 @@ PhD Student
     - Advisor: [Inkyu Park](https://sites.google.com/view/vcl-lab/)
 
     - Sep. 2020 ~ Feb. 2023.
+
+    - Topic: Depth Estimation for Lossy Light Field
 
 
 * **B.S.** at [Computer Engineering, Yonsei University (Wonju)](https://www.yonsei.ac.kr/wj), Wonju, South Korea.
