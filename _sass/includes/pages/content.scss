@@ -90,7 +90,7 @@
     transform: rotate(-7deg);
     transform-origin: 28px 18px;
     transition: opacity .18s ease, transform .18s ease;
-    white-space: pre-line;
+    white-space: normal;
 
     &.is-empty {
       opacity: 0;
@@ -112,8 +112,10 @@
   }
 
   &__caption-text {
+    display: block;
     position: relative;
     z-index: 1;
+    white-space: pre-line;
   }
 
   &__sparkle {
