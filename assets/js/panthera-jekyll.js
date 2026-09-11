@@ -93,8 +93,14 @@ jQuery(document).ready(function () {
 
       function requestCaption(pathIndex) {
         if (pathIndex >= captionPaths.length) { return; }
+        if (!captionPaths[pathIndex]) {
+          requestCaption(pathIndex + 1);
+          return;
+        }
 
-        jQuery.get(captionPaths[pathIndex])
+        var cacheBustedPath = captionPaths[pathIndex] + (String(captionPaths[pathIndex]).indexOf('?') === -1 ? '?' : '&') + 'v=' + Date.now();
+
+        jQuery.get(cacheBustedPath)
           .done(function (text) {
             captions = parseCaptions(text);
             updateCaption($thumbnails.eq(activeIndex));

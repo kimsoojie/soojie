@@ -3,15 +3,15 @@
 {% for photo in site.static_files %}
   {% assign photo_ext = photo.extname | downcase %}
   {% assign in_photo_folder = false %}
+  {% assign valid_photo_ext = false %}
   {% if photo.path contains '/assets/photo/' %}{% assign in_photo_folder = true %}{% endif %}
   {% if photo.path contains '/assets/images/photo/' %}{% assign in_photo_folder = true %}{% endif %}
-  {% if in_photo_folder %}
-    {% if photo_ext != '.heic' %}
-      {% if photo_ext != '.mov' %}
-        {% assign gallery_photo_count = gallery_photo_count | plus: 1 %}
-        {% if gallery_first_photo == nil %}{% assign gallery_first_photo = photo %}{% endif %}
-      {% endif %}
-    {% endif %}
+  {% if photo_ext == '.jpg' or photo_ext == '.jpeg' or photo_ext == '.png' or photo_ext == '.gif' or photo_ext == '.webp' %}
+    {% assign valid_photo_ext = true %}
+  {% endif %}
+  {% if in_photo_folder and valid_photo_ext %}
+    {% assign gallery_photo_count = gallery_photo_count | plus: 1 %}
+    {% if gallery_first_photo == nil %}{% assign gallery_first_photo = photo %}{% endif %}
   {% endif %}
 {% endfor %}
 
@@ -51,9 +51,13 @@
       {% for photo in site.static_files %}
         {% assign photo_ext = photo.extname | downcase %}
         {% assign in_photo_folder = false %}
+        {% assign valid_photo_ext = false %}
         {% if photo.path contains '/assets/photo/' %}{% assign in_photo_folder = true %}{% endif %}
         {% if photo.path contains '/assets/images/photo/' %}{% assign in_photo_folder = true %}{% endif %}
-        {% if in_photo_folder and photo_ext != '.heic' and photo_ext != '.mov' %}
+        {% if photo_ext == '.jpg' or photo_ext == '.jpeg' or photo_ext == '.png' or photo_ext == '.gif' or photo_ext == '.webp' %}
+          {% assign valid_photo_ext = true %}
+        {% endif %}
+        {% if in_photo_folder and valid_photo_ext %}
     <button type="button" class="photo-gallery__thumbnail{% if gallery_rendered_index == 0 %} is-active{% endif %}" role="tab" aria-selected="{% if gallery_rendered_index == 0 %}true{% else %}false{% endif %}" data-photo-src="{{ photo.path | relative_url }}" data-photo-alt="Photo {{ gallery_rendered_index | plus: 1 }}">
       <img src="{{ photo.path | relative_url }}" alt="" loading="lazy">
     </button>
