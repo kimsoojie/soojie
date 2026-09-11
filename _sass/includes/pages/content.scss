@@ -75,6 +75,8 @@
     top: 14px;
     left: 16px;
     z-index: 2;
+    box-sizing: border-box;
+    width: fit-content;
     max-width: min(62%, 260px);
     padding: 13px 18px 15px;
     border-radius: 7px;
