@@ -80,9 +80,9 @@
     max-width: min(62%, 260px);
     padding: 13px 18px 15px;
     border-radius: 7px;
-    color: #5f4d58;
-    background: #ffb8cf;
-    box-shadow: 0 8px 22px rgba(52, 36, 44, .16);
+    color: #7a3f4b;
+    background: #ffd3c8;
+    box-shadow: 0 8px 22px rgba(96, 54, 62, .16);
     font-family: "Comic Sans MS", "Bradley Hand", cursive;
     font-size: 1rem;
     line-height: 1.35;
@@ -105,8 +105,8 @@
       width: 54px;
       height: 18px;
       border-radius: 2px;
-      background: rgba(255, 214, 226, .88);
-      box-shadow: 0 2px 7px rgba(52, 36, 44, .08);
+      background: rgba(236, 178, 158, .84);
+      box-shadow: 0 2px 7px rgba(96, 54, 62, .1);
       transform: rotate(5deg);
     }
   }
@@ -121,12 +121,12 @@
   &__sparkle {
     position: absolute;
     z-index: 2;
-    color: #ff8fb3;
+    color: #ff5f9c;
     font-size: 1rem;
     line-height: 1;
     opacity: 1;
     pointer-events: none;
-    text-shadow: 0 0 2px #fff, 0 0 7px rgba(255, 122, 169, .95), 0 0 14px rgba(255, 205, 92, .7);
+    text-shadow: 0 0 2px #fff8fb, 0 0 7px rgba(255, 74, 147, .95), 0 0 14px rgba(255, 218, 122, .82);
     animation: pan-menu-sparkle 1.5s ease-in-out infinite;
   }
 
@@ -138,7 +138,7 @@
   &__sparkle--two {
     top: .9rem;
     right: .42rem;
-    color: #ffc247;
+    color: #fff4b8;
     font-size: .86rem;
     animation-delay: -.38s;
   }
@@ -146,7 +146,7 @@
   &__sparkle--three {
     bottom: .34rem;
     left: .42rem;
-    color: #ff7faf;
+    color: #ff4f93;
     font-size: .78rem;
     animation-delay: -.82s;
   }
@@ -154,7 +154,7 @@
   &__sparkle--four {
     top: .36rem;
     left: .48rem;
-    color: #ffc247;
+    color: #ffd36e;
     font-size: .72rem;
     animation-delay: -1.15s;
   }
