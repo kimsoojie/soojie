@@ -32,10 +32,12 @@
     <img class="photo-gallery__main-image" src="{% if gallery_photo_count > 0 %}{{ gallery_first_photo.path | relative_url }}{% else %}{{ '/assets/images/left-background.jpg' | relative_url }}{% endif %}" alt="Photo 1" loading="eager">
     <div class="photo-gallery__caption is-empty" aria-live="polite">
       <span class="photo-gallery__caption-text"></span>
-      <span class="photo-gallery__sparkle photo-gallery__sparkle--one" aria-hidden="true">♡</span>
+      <span class="photo-gallery__sparkle photo-gallery__sparkle--one" aria-hidden="true">♥</span>
       <span class="photo-gallery__sparkle photo-gallery__sparkle--two" aria-hidden="true">♥</span>
-      <span class="photo-gallery__sparkle photo-gallery__sparkle--three" aria-hidden="true">♡</span>
+      <span class="photo-gallery__sparkle photo-gallery__sparkle--three" aria-hidden="true">♥</span>
       <span class="photo-gallery__sparkle photo-gallery__sparkle--four" aria-hidden="true">♥</span>
+      <span class="photo-gallery__star photo-gallery__star--one" aria-hidden="true">★</span>
+      <span class="photo-gallery__star photo-gallery__star--two" aria-hidden="true">★</span>
     </div>
     <button type="button" class="photo-gallery__stage-control photo-gallery__stage-control--previous" aria-label="Previous photo">
       <i class="fas fa-chevron-left" aria-hidden="true"></i>
