@@ -31,6 +31,7 @@ jQuery(document).ready(function () {
     var $thumbnails = $gallery.find('.photo-gallery__thumbnail');
     var $count = $gallery.find('.photo-gallery__count');
     var $caption = $gallery.find('.photo-gallery__caption');
+    var $captionText = $gallery.find('.photo-gallery__caption-text');
     var captions = {};
     var activeIndex = 0;
     var thumbnailWindowSize = 8;
@@ -59,7 +60,9 @@ jQuery(document).ready(function () {
     }
 
     function updateCaption($thumbnail) {
-      $caption.text(captions[photoFile($thumbnail)] || '');
+      var caption = captions[photoFile($thumbnail)] || '';
+      $captionText.text(caption);
+      $caption.toggleClass('is-empty', caption === '');
     }
 
     function parseCaptions(text) {

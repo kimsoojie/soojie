@@ -90,7 +90,7 @@
     transition: opacity .18s ease, transform .18s ease;
     white-space: pre-line;
 
-    &:empty {
+    &.is-empty {
       opacity: 0;
       pointer-events: none;
     }
@@ -107,6 +107,51 @@
       box-shadow: 0 2px 7px rgba(52, 36, 44, .08);
       transform: rotate(5deg);
     }
+  }
+
+  &__caption-text {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__sparkle {
+    position: absolute;
+    z-index: 2;
+    color: #fff9cf;
+    font-size: .85rem;
+    line-height: 1;
+    opacity: .9;
+    pointer-events: none;
+    text-shadow: 0 0 4px #fff, 0 0 9px #fff, 0 0 16px rgba(255, 168, 204, 1);
+    animation: pan-menu-sparkle 1.5s ease-in-out infinite;
+  }
+
+  &__sparkle--one {
+    top: -1rem;
+    right: -.9rem;
+  }
+
+  &__sparkle--two {
+    top: .5rem;
+    right: -1.1rem;
+    color: #ffe1ec;
+    font-size: .72rem;
+    animation-delay: -.38s;
+  }
+
+  &__sparkle--three {
+    bottom: -.65rem;
+    left: -.9rem;
+    color: #ffe1ec;
+    font-size: .6rem;
+    animation-delay: -.82s;
+  }
+
+  &__sparkle--four {
+    top: -.55rem;
+    left: .45rem;
+    font-size: .5rem;
+    animation-delay: -1.15s;
   }
 
   &__stage-control {
@@ -170,5 +215,11 @@
       padding: 10px 14px 12px;
       font-size: .88rem;
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-gallery__sparkle {
+    animation: none;
   }
 }
