@@ -81,7 +81,7 @@
     padding: 13px 18px 15px;
     border-radius: 7px;
     color: #5f4d58;
-    background: #eeeeee;
+    background: #ffb8cf;
     box-shadow: 0 8px 22px rgba(52, 36, 44, .16);
     font-family: "Comic Sans MS", "Bradley Hand", cursive;
     font-size: 1rem;
@@ -121,12 +121,12 @@
   &__sparkle {
     position: absolute;
     z-index: 2;
-    color: #fff9cf;
-    font-size: .85rem;
+    color: #ff8fb3;
+    font-size: 1rem;
     line-height: 1;
-    opacity: .9;
+    opacity: 1;
     pointer-events: none;
-    text-shadow: 0 0 4px #fff, 0 0 9px #fff, 0 0 16px rgba(255, 168, 204, 1);
+    text-shadow: 0 0 2px #fff, 0 0 7px rgba(255, 122, 169, .95), 0 0 14px rgba(255, 205, 92, .7);
     animation: pan-menu-sparkle 1.5s ease-in-out infinite;
   }
 
@@ -138,23 +138,24 @@
   &__sparkle--two {
     top: .9rem;
     right: .42rem;
-    color: #ffe1ec;
-    font-size: .72rem;
+    color: #ffc247;
+    font-size: .86rem;
     animation-delay: -.38s;
   }
 
   &__sparkle--three {
     bottom: .34rem;
     left: .42rem;
-    color: #ffe1ec;
-    font-size: .6rem;
+    color: #ff7faf;
+    font-size: .78rem;
     animation-delay: -.82s;
   }
 
   &__sparkle--four {
     top: .36rem;
     left: .48rem;
-    font-size: .5rem;
+    color: #ffc247;
+    font-size: .72rem;
     animation-delay: -1.15s;
   }
 
