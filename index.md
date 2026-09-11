@@ -27,7 +27,7 @@ PhD Student
 ## Research Interests
 * Computer Vision and Deep Learning
 
-* Zero-shot Human Action Recognition
+* Skeleton-based Zero-Shot Action Recognition
 
 ## Education
 * **Ph.D.** at [Artificial Intelligence Graduate School, Ulsan National Institute of Science and Technology (UNIST)](https://aigs.unist.ac.kr/web/index.php), Ulsan, South Korea.
