@@ -269,21 +269,27 @@
   margin: 0 0 8px;
   color: #7b8ba4;
   font-size: .84rem;
+
+  span + span {
+    padding-left: 14px;
+    border-left: 1px solid rgba(123, 139, 164, .32);
+  }
 }
 
 .publication-card__arxiv {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 78px;
-  min-height: 36px;
-  padding: 7px 16px;
+  min-width: 56px;
+  min-height: 26px;
+  margin-top: 8px;
+  padding: 5px 10px;
   border: 1px solid #2f8df0;
-  border-radius: 7px;
+  border-radius: 5px;
   color: #1477d4;
   background: rgba(255, 255, 255, .78);
-  box-shadow: 0 3px 10px rgba(41, 120, 210, .12);
-  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(41, 120, 210, .1);
+  font-size: .82rem;
   font-weight: 800;
   line-height: 1;
 
@@ -301,9 +307,10 @@
 }
 
 .publication-card__venue {
+  display: table;
   margin: 0 0 8px;
   padding: 7px 14px;
-  border-radius: 999px;
+  border-radius: 6px;
   color: #006dcc;
   background: rgba(216, 234, 255, .82);
   font-size: .86rem;
@@ -311,14 +318,14 @@
 }
 
 .publication-card__info {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
-  width: min(100%, 560px);
+  max-width: 100%;
   margin: 0;
   padding: 7px 14px;
   border: 1px solid rgba(220, 174, 74, .55);
-  border-radius: 999px;
+  border-radius: 6px;
   color: #8b6727;
   background: #fff0c4;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .45);
