@@ -229,12 +229,12 @@
 .publication-card__banner {
   display: grid;
   flex: 1 1 auto;
-  grid-template-columns: clamp(145px, 15%, 180px) minmax(0, 1fr);
-  gap: clamp(14px, 1.8vw, 22px);
+  grid-template-columns: clamp(185px, 18%, 230px) minmax(0, 1fr);
+  gap: clamp(16px, 2vw, 24px);
   align-items: center;
   width: 100%;
   max-width: none;
-  margin-left: -72px;
+  margin-left: -130px;
   min-height: 170px;
   padding: 16px clamp(20px, 2.6vw, 30px);
   border: 1px solid #dce3ea;
@@ -250,7 +250,7 @@
 .publication-card__award {
   display: block;
   width: 100%;
-  max-width: 140px;
+  max-width: 210px;
   justify-self: center;
 }
 
