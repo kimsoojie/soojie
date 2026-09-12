@@ -213,8 +213,8 @@
 
 .publication-card__motion {
   display: block;
-  flex: 0 0 clamp(400px, 30vw, 500px);
-  max-width: 500px;
+  flex: 0 0 clamp(330px, 25vw, 420px);
+  max-width: 420px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -229,14 +229,14 @@
 .publication-card__banner {
   display: grid;
   flex: 1 1 auto;
-  grid-template-columns: clamp(155px, 16%, 195px) minmax(0, 1fr);
-  gap: clamp(14px, 1.6vw, 20px);
+  grid-template-columns: clamp(145px, 15%, 180px) minmax(0, 1fr);
+  gap: clamp(10px, 1.3vw, 16px);
   align-items: center;
   width: 100%;
   max-width: none;
   margin-left: -48px;
-  min-height: 145px;
-  padding: 13px clamp(18px, 2.2vw, 26px);
+  min-height: 132px;
+  padding: 10px clamp(18px, 2.2vw, 26px);
   border: 1px solid #dce3ea;
   border-radius: 10px;
   background: #fff;
@@ -249,15 +249,16 @@
   display: block;
   width: 100%;
   max-width: 170px;
-  justify-self: center;
+  justify-self: start;
 }
 
 .publication-card__body {
   align-self: stretch;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   min-width: 0;
-  padding: 0;
+  padding: 8px 0 2px;
   transform: translateX(-8px);
 
   h2 {
@@ -407,7 +408,7 @@
   }
 
   .publication-card__motion {
-    max-width: min(100%, 360px);
+    max-width: min(100%, 300px);
     margin-bottom: 20px;
   }
 
