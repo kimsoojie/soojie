@@ -227,8 +227,8 @@
 .publication-card__banner {
   display: grid;
   flex: 1 1 auto;
-  grid-template-columns: clamp(190px, 20%, 250px) minmax(0, 1fr);
-  gap: clamp(20px, 3vw, 34px);
+  grid-template-columns: clamp(145px, 15%, 180px) minmax(0, 1fr);
+  gap: clamp(14px, 1.8vw, 22px);
   align-items: center;
   width: 100%;
   max-width: none;
@@ -245,13 +245,14 @@
 .publication-card__award {
   display: block;
   width: 100%;
-  max-width: 165px;
+  max-width: 140px;
   justify-self: center;
 }
 
 .publication-card__body {
   min-width: 0;
   padding: 0;
+  transform: translateX(-8px);
 
   h2 {
     margin: 0 0 8px;
@@ -280,12 +281,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: fit-content;
   min-width: 56px;
   min-height: 26px;
-  margin-top: 8px;
+  margin-top: 14px;
   padding: 5px 10px;
   border: 1px solid #2f8df0;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #1477d4;
   background: rgba(255, 255, 255, .78);
   box-shadow: 0 2px 6px rgba(41, 120, 210, .1);
@@ -307,10 +309,12 @@
 }
 
 .publication-card__venue {
-  display: table;
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
   margin: 0 0 8px;
   padding: 7px 14px;
-  border-radius: 6px;
+  border-radius: 3px;
   color: #006dcc;
   background: rgba(216, 234, 255, .82);
   font-size: .86rem;
@@ -318,14 +322,15 @@
 }
 
 .publication-card__info {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 12px;
+  width: fit-content;
   max-width: 100%;
   margin: 0;
   padding: 7px 14px;
   border: 1px solid rgba(220, 174, 74, .55);
-  border-radius: 6px;
+  border-radius: 3px;
   color: #8b6727;
   background: #fff0c4;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .45);
