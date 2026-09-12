@@ -17,7 +17,7 @@ permalink: /publication/
       <div class="publication-card__body">
         <div class="publication-card__meta">
           <span>ECCV 2026</span>
-          <a href="https://arxiv.org/abs/2609.10187" target="_blank" rel="noopener">[arXiv]</a>
+          <a class="publication-card__arxiv" href="https://arxiv.org/abs/2609.10187" target="_blank" rel="noopener">arXiv</a>
         </div>
 
         <h2>
@@ -35,7 +35,8 @@ permalink: /publication/
         </p>
 
         <p class="publication-card__info">
-          58 teams competed for sponsor-funded monetary prizes.
+          <i class="fa fa-users" aria-hidden="true"></i>
+          <span>58 teams competed for sponsor-funded monetary prizes.</span>
         </p>
       </div>
     </div>

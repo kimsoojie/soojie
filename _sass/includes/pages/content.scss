@@ -200,19 +200,21 @@
 
 .publication-list {
   width: 100%;
+  max-width: none;
 }
 
 .publication-card {
-  display: grid;
-  grid-template-columns: clamp(340px, 27vw, 430px) minmax(0, 1fr);
+  display: flex;
   gap: 32px;
   align-items: center;
+  width: 100%;
   margin: 0 0 28px;
 }
 
 .publication-card__motion {
   display: block;
-  max-width: 410px;
+  flex: 0 0 clamp(460px, 34vw, 580px);
+  max-width: 580px;
   margin: 0 auto;
 
   img {
@@ -224,12 +226,14 @@
 
 .publication-card__banner {
   display: grid;
+  flex: 1 1 auto;
   grid-template-columns: clamp(190px, 20%, 250px) minmax(0, 1fr);
   gap: clamp(20px, 3vw, 34px);
   align-items: center;
   width: 100%;
-  min-height: 220px;
-  padding: 22px clamp(22px, 3vw, 34px);
+  max-width: none;
+  min-height: 170px;
+  padding: 16px clamp(20px, 2.6vw, 30px);
   border: 1px solid #dce3ea;
   border-radius: 10px;
   background-image: url("/assets/images/publication/1/bg.png");
@@ -241,7 +245,7 @@
 .publication-card__award {
   display: block;
   width: 100%;
-  max-width: 210px;
+  max-width: 165px;
   justify-self: center;
 }
 
@@ -250,56 +254,80 @@
   padding: 0;
 
   h2 {
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     color: #006dcc;
-    font-size: 1.28rem;
-    line-height: 1.22;
+    font-size: 1.08rem;
+    line-height: 1.2;
   }
 }
 
 .publication-card__meta {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
-  gap: 18px;
-  margin: 0 0 10px;
+  gap: 14px;
+  margin: 0 0 8px;
   color: #7b8ba4;
-  font-size: .92rem;
+  font-size: .84rem;
+}
 
-  a {
-    padding: 7px 14px;
-    border: 1px solid #2f8df0;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, .72);
-    font-weight: 700;
+.publication-card__arxiv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  min-height: 36px;
+  padding: 7px 16px;
+  border: 1px solid #2f8df0;
+  border-radius: 7px;
+  color: #1477d4;
+  background: rgba(255, 255, 255, .78);
+  box-shadow: 0 3px 10px rgba(41, 120, 210, .12);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1;
+
+  &:hover {
+    background: #fff;
+    text-decoration: none;
   }
 }
 
 .publication-card__authors {
-  margin: 0 0 14px;
+  margin: 0 0 10px;
   color: #617086;
-  font-size: .98rem;
+  font-size: .9rem;
   line-height: 1.45;
 }
 
 .publication-card__venue {
-  margin: 0 0 10px;
-  padding: 8px 16px;
+  margin: 0 0 8px;
+  padding: 7px 14px;
   border-radius: 999px;
   color: #006dcc;
   background: rgba(216, 234, 255, .82);
-  font-size: .95rem;
+  font-size: .86rem;
   font-weight: 700;
 }
 
 .publication-card__info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(100%, 560px);
   margin: 0;
-  padding: 8px 16px;
-  border: 1px solid rgba(222, 177, 82, .34);
+  padding: 7px 14px;
+  border: 1px solid rgba(220, 174, 74, .55);
   border-radius: 999px;
-  color: #8a6727;
-  background: rgba(255, 239, 203, .86);
-  font-size: .92rem;
+  color: #8b6727;
+  background: #fff0c4;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .45);
+  font-size: .84rem;
   font-weight: 700;
+
+  i {
+    color: #c6912d;
+  }
 }
 
 @keyframes pan-caption-heart-float {
@@ -344,12 +372,13 @@
   }
 
   .publication-card {
-    grid-template-columns: 1fr;
+    display: block;
     gap: 20px;
   }
 
   .publication-card__motion {
-    max-width: 280px;
+    max-width: min(100%, 360px);
+    margin-bottom: 20px;
   }
 
   .publication-card__banner {
