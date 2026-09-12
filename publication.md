@@ -33,6 +33,10 @@ permalink: /publication/
         <p class="publication-card__venue">
           3rd Place Solution to the MoCha 2026 Challenge at ECCV 2026
         </p>
+
+        <p class="publication-card__info">
+          58 teams competed for sponsor-funded monetary prizes.
+        </p>
       </div>
     </div>
   </article>
