@@ -205,7 +205,7 @@
 
 .publication-card {
   display: flex;
-  gap: 32px;
+  gap: 0;
   align-items: center;
   width: 100%;
   margin: 0 0 28px;
@@ -216,6 +216,8 @@
   flex: 0 0 clamp(460px, 34vw, 580px);
   max-width: 580px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 
   img {
     display: block;
@@ -232,6 +234,7 @@
   align-items: center;
   width: 100%;
   max-width: none;
+  margin-left: -72px;
   min-height: 170px;
   padding: 16px clamp(20px, 2.6vw, 30px);
   border: 1px solid #dce3ea;
@@ -240,6 +243,8 @@
   background-position: center;
   background-size: cover;
   box-shadow: 0 9px 24px rgba(46, 61, 79, .14);
+  position: relative;
+  z-index: 2;
 }
 
 .publication-card__award {
@@ -250,6 +255,9 @@
 }
 
 .publication-card__body {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
   min-width: 0;
   padding: 0;
   transform: translateX(-8px);
@@ -284,7 +292,7 @@
   width: fit-content;
   min-width: 56px;
   min-height: 26px;
-  margin-top: 14px;
+  margin-top: auto;
   padding: 5px 10px;
   border: 1px solid #2f8df0;
   border-radius: 3px;
@@ -396,6 +404,7 @@
   .publication-card__banner {
     grid-template-columns: 1fr;
     gap: 14px;
+    margin-left: 0;
     padding: 18px;
   }
 
