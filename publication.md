@@ -18,6 +18,7 @@ permalink: /publication/
         <div class="publication-card__meta">
           <span>MoCha @ ECCV 2026</span>
           <span>Human Motion Challenges</span>
+          <span>Technical Report</span>
         </div>
 
         <h2>
