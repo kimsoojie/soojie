@@ -35,7 +35,7 @@ permalink: /publication/
         </p>
 
         <p class="publication-card__info">
-          <span>👥 58 teams competed for sponsor-funded monetary prizes.</span>
+          <span>👥 58 teams competed for sponsor-funded monetary prizes</span>
         </p>
 
         <a class="publication-card__arxiv" href="https://arxiv.org/abs/2609.10187" target="_blank" rel="noopener">arXiv</a>
