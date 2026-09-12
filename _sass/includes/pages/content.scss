@@ -218,6 +218,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  transform: translateX(-24px);
 
   img {
     display: block;
@@ -417,6 +418,7 @@
 
   .publication-card__award {
     max-width: 170px;
+    justify-self: center;
   }
 
   .publication-card__meta {
