@@ -43,6 +43,10 @@ menu:
     link: /blog
     icon: ""
 
+  - text: Publication
+    link: /publication
+    icon: ""
+
 # Socialmedia Icons
 social_icons:
   - name: Google Scholar
