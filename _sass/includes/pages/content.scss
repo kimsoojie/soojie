@@ -213,8 +213,8 @@
 
 .publication-card__motion {
   display: block;
-  flex: 0 0 clamp(460px, 34vw, 580px);
-  max-width: 580px;
+  flex: 0 0 clamp(400px, 30vw, 500px);
+  max-width: 500px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -229,14 +229,14 @@
 .publication-card__banner {
   display: grid;
   flex: 1 1 auto;
-  grid-template-columns: clamp(185px, 18%, 230px) minmax(0, 1fr);
-  gap: clamp(16px, 2vw, 24px);
+  grid-template-columns: clamp(155px, 16%, 195px) minmax(0, 1fr);
+  gap: clamp(14px, 1.6vw, 20px);
   align-items: center;
   width: 100%;
   max-width: none;
   margin-left: -48px;
-  min-height: 170px;
-  padding: 16px clamp(20px, 2.6vw, 30px);
+  min-height: 145px;
+  padding: 13px clamp(18px, 2.2vw, 26px);
   border: 1px solid #dce3ea;
   border-radius: 10px;
   background-image: url("/assets/images/publication/1/bg.png");
@@ -250,7 +250,7 @@
 .publication-card__award {
   display: block;
   width: 100%;
-  max-width: 210px;
+  max-width: 170px;
   justify-self: center;
 }
 
@@ -263,11 +263,18 @@
   transform: translateX(-8px);
 
   h2 {
-    margin: 0 0 8px;
+    width: 100%;
+    margin: 0 0 6px;
     color: #006dcc;
-    font-size: clamp(.9rem, 1.05vw, 1.02rem);
-    line-height: 1.18;
+    font-size: clamp(.84rem, .96vw, .95rem);
+    line-height: 1.16;
+    text-align: left;
     overflow-wrap: anywhere;
+
+    a {
+      display: block;
+      width: 100%;
+    }
   }
 }
 
@@ -275,8 +282,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 14px;
-  margin: 0 0 8px;
+  gap: 12px;
+  margin: 0 0 6px;
   color: #7b8ba4;
   font-size: clamp(.72rem, .85vw, .82rem);
 
@@ -292,10 +299,10 @@
   justify-content: center;
   width: fit-content;
   min-width: 56px;
-  min-height: 26px;
-  margin-top: 14px;
-  margin-bottom: 8px;
-  padding: 5px 10px;
+  min-height: 24px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  padding: 4px 10px;
   border: 1px solid #2f8df0;
   border-radius: 3px;
   color: #1477d4;
@@ -312,7 +319,7 @@
 }
 
 .publication-card__authors {
-  margin: 0 0 10px;
+  margin: 0 0 7px;
   color: #617086;
   font-size: clamp(.78rem, .9vw, .86rem);
   line-height: 1.35;
@@ -323,8 +330,8 @@
   display: flex;
   width: fit-content;
   max-width: 100%;
-  margin: 0 0 8px;
-  padding: 7px 14px;
+  margin: 0 0 6px;
+  padding: 6px 12px;
   border-radius: 3px;
   color: #006dcc;
   background: rgba(216, 234, 255, .82);
@@ -336,11 +343,11 @@
 .publication-card__info {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 9px;
   width: fit-content;
   max-width: 100%;
   margin: 0;
-  padding: 7px 14px;
+  padding: 6px 12px;
   border: 1px solid rgba(220, 174, 74, .55);
   border-radius: 3px;
   color: #8b6727;
