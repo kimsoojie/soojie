@@ -3,7 +3,7 @@ layout: default
 permalink: /publication/
 ---
 
-# PUBLICATION
+# PUBLICATIONS
 
 <section class="publication-list">
   <article class="publication-card">
