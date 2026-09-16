@@ -344,7 +344,7 @@
 }
 
 .publication-card__info {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 9px;
   width: fit-content;
@@ -368,7 +368,7 @@
 }
 
 .publication-card__info + .publication-card__info {
-  margin-left: 6px;
+  margin-top: 6px;
 }
 
 @keyframes pan-caption-heart-float {
@@ -443,19 +443,6 @@
     font-size: 1.05rem;
   }
 
-  .publication-card__info {
-    display: flex;
-  }
-
-  .publication-card__info > span {
-    display: inline;
-    overflow-wrap: anywhere;
-  }
-
-  .publication-card__info + .publication-card__info {
-    margin-top: 6px;
-    margin-left: 0;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
