@@ -154,7 +154,7 @@ jQuery(document).ready(function () {
   })();
 
   (function () {
-    var emoticons = ['🧚🏻‍♀️', '💘', '💕', '🤔', '🐾', '💝', '😽', '❄️', '⭐', '🥳', '🧐', '❤️', '🧡', '🍿', '🐩', '🍰', '👽', '🧑‍🎄', '💍', '🍓', '🍑', '☔', '🎂', '🐹', '🥺', '🍔', '✨', '💫', '😻', '👯‍♀️', '💃', '🧞‍♀️', '🐰', '🍒', '💖', '🥰', '🎀', '🎉','💌','👀'];
+    var emoticons = ['🧚🏻‍♀️', '💘', '💕', '🤔', '🐾', '🗿', '🤧', '🐕‍🦺', '🐡', '🪸', '🍤', '🦤', '🥨', '🫶', '😡', '💝', '😽', '❄️', '⭐', '🥳', '🧐', '❤️', '🧡', '🍿', '🐩', '🍰', '👽', '🧑‍🎄', '💍', '🍓', '🍑', '☔', '🎂', '🐹', '🥺', '🍔', '✨', '💫', '😻', '👯‍♀️', '💃', '🧞‍♀️', '🐰', '🍒', '💖', '🥰', '🎀', '🎉','💌','👀'];
 
     jQuery(document).on('click', function (e) {
       var $emoticon = jQuery('<span class="pan-click-emoticon" aria-hidden="true"></span>');
@@ -177,7 +177,7 @@ jQuery(document).ready(function () {
   (function () {
     var sparkles = ['💝', '🎉', '🍬', '🫧', '💖', '✨', '🎀', '💕', '🍰', '🧚‍♀️', '🍒', '⭐',];
     var activeSparkles = 0;
-    var maxSparkles = 40;
+    var maxSparkles = 30;
 
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       return;
