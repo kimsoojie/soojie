@@ -36,7 +36,7 @@ permalink: /publication/
         </p>
 
         <p class="publication-card__info">
-          <span>👥 58 teams competed for sponsor-funded monetary prizes (1,669 submissions from 112 participants)</span>
+          <span>👥 58 teams competed for sponsor-funded monetary prizes (1,669 model submissions from 112 participants)</span>
         </p>
 
         <a class="publication-card__arxiv" href="https://arxiv.org/abs/2609.10187" target="_blank" rel="noopener">arXiv</a>
