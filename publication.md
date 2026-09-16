@@ -32,15 +32,15 @@ permalink: /publication/
         </p>
 
         <p class="publication-card__venue">
-          🏅 3rd Place, MoCha 2026 Challenge @ ECCV 2026
+          <span class="publication-card__emoji">🏅</span> 3rd Place, MoCha 2026 Challenge @ ECCV 2026
         </p>
 
         <p class="publication-card__info">
-          <span>👥 Ranked 3rd of 58 entries (1,669 submissions, 112 participants)</span>
+          <span><span class="publication-card__emoji">👥</span> Ranked 3rd of 58 entries (1,669 submissions, 112 participants)</span>
         </p>
 
         <p class="publication-card__info">
-          <span>💰 Competition with sponsor-funded monetary prizes</span>
+          <span><span class="publication-card__emoji">💰</span> Competition with sponsor-funded monetary prizes</span>
         </p>
 
         <a class="publication-card__arxiv" href="https://arxiv.org/abs/2609.10187" target="_blank" rel="noopener">arXiv</a>
