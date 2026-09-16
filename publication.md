@@ -36,7 +36,7 @@ permalink: /publication/
         </p>
 
         <p class="publication-card__info">
-          <span><span class="publication-card__emoji">👥</span> Ranking 3rd among 58 leaderboard entries (1,669 model submissions from 112 participants)</span>
+          <span><span class="publication-card__emoji">👥</span> Ranked 3rd of 58 entries (1,669 submissions, 112 participants)</span>
         </p>
 
         <p class="publication-card__info">
