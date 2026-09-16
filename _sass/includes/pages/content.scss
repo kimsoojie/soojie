@@ -332,6 +332,7 @@
   max-width: 100%;
   margin: 0 0 6px;
   padding: 6px 12px;
+  border: 1px solid rgba(87, 151, 224, .5);
   border-radius: 3px;
   color: #006dcc;
   background: rgba(216, 234, 255, .82);
@@ -346,7 +347,7 @@
   gap: 9px;
   width: fit-content;
   max-width: 100%;
-  margin: 0 0 6px;
+  margin: 0;
   padding: 6px 12px;
   border: 1px solid rgba(220, 174, 74, .55);
   border-radius: 3px;
@@ -356,6 +357,10 @@
   font-size: clamp(.72rem, .84vw, .8rem);
   font-weight: 700;
   line-height: 1.25;
+}
+
+.publication-card__info + .publication-card__info {
+  margin-top: 6px;
 }
 
 @keyframes pan-caption-heart-float {
