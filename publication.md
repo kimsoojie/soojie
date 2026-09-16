@@ -40,7 +40,7 @@ permalink: /publication/
         </p>
 
         <p class="publication-card__info">
-          <span>💰 Competition with sponsor-funded monetary prizes</span>
+          <span><span class="publication-card__emoji">💰</span> Competition with sponsor-funded monetary prizes</span>
         </p>
 
         <a class="publication-card__arxiv" href="https://arxiv.org/abs/2609.10187" target="_blank" rel="noopener">arXiv</a>
