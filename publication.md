@@ -32,11 +32,11 @@ permalink: /publication/
         </p>
 
         <p class="publication-card__venue">
-          🏅 3rd Place, MoCha 2026 Challenge @ ECCV 2026
+          <span class="publication-card__emoji">🏅</span> 3rd Place, MoCha 2026 Challenge @ ECCV 2026
         </p>
 
         <p class="publication-card__info">
-          <span>👥 Ranking 3rd among 58 leaderboard entries (1,669 model submissions from 112 participants)</span>
+          <span><span class="publication-card__emoji">👥</span> Ranking 3rd among 58 leaderboard entries (1,669 model submissions from 112 participants)</span>
         </p>
 
         <p class="publication-card__info">
