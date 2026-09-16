@@ -344,7 +344,7 @@
 }
 
 .publication-card__info {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 9px;
   width: fit-content;
@@ -368,7 +368,7 @@
 }
 
 .publication-card__info + .publication-card__info {
-  margin-top: 6px;
+  margin-left: 6px;
 }
 
 @keyframes pan-caption-heart-float {
